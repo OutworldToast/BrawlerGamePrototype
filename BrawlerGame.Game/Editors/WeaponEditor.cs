@@ -2,14 +2,10 @@ using Models;
 
 namespace Editors;
 
-public class Options { //temporary class
-
-}
-
 public class WeaponEditor { //should implement additional logic for weapon creation
-    private readonly Options? _options;
+    private readonly IOptions? _options;
 
-    public WeaponEditor(Options? options) {
+    public WeaponEditor(IOptions? options) {
         _options = options;
     }
 

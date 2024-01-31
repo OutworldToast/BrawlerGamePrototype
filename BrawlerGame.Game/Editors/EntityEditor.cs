@@ -3,9 +3,9 @@ using Models;
 namespace Editors;
 
 public abstract class EntityEditor {
-    private readonly Options? _options;
+    private readonly IOptions? _options;
 
-    public EntityEditor(Options? options) {
+    public EntityEditor(IOptions? options) {
         _options = options;
     }
 
