@@ -5,7 +5,7 @@ public abstract class IEntity {
     public int Speed { get; set; }
     public int HealValue { get; set; }
     public double DamageTakenMultiplier { get; set; }
-    public Weapon? Weapon { get; set; } // null handling?
+    public Weapon Weapon { get; set; } = new Weapon();
     public bool Attack(IEntity enemy){
         int Damage = (int) Weapon!.Damage;
         return enemy.TakeDamage(Health) > 0;
@@ -21,8 +21,8 @@ public abstract class IEntity {
         Health += healed;
         return healed;
     }
-    public int getActionableSpeed() { //ignorenull should not be here
-        return (int) (Speed * Weapon!.SpeedMultiplier);
+    public int getActionableSpeed() { 
+        return (int) (Speed * Weapon.SpeedMultiplier);
     }
 
 }

@@ -27,7 +27,7 @@ public abstract class EntityEditor {
         entity.DamageTakenMultiplier = damageTakenMultiplier;
     }
 
-    public void SetWeapon(IEntity entity, Weapon? weapon) {
+    public void SetWeapon(IEntity entity, Weapon weapon) {
         entity.Weapon = weapon;
     }
 }
